@@ -1,4 +1,7 @@
+import { MyLayout } from '../layouts/MyLayout.jsx' // 追加
 import { RankingTable } from '../components/RankingTable.jsx'
+
+export const meta = { title: '10月のお気に入り数ランキング' } // 追加
 
 export const rankingData = [
   { slug: '2022-ogp-image', title: '攻略、OGP画像作成' },
@@ -17,3 +20,6 @@ export const rankingData = [
 ### 新登場の記事
 
 今月新登場だった記事は...（続）
+
+{/* 最後にレイアウト用コンポーネントにメタデータを渡し、コンテンツをラップしてexport */}
+export default ({ children }) => <MyLayout meta={meta}>{children}</MyLayout>
