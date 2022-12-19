@@ -3,7 +3,8 @@ const remarkHeadingId = require('remark-heading-id')
 const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/,
   options: {
-    remarkPlugins: [remarkHeadingId], //追加
+    providerImportSource: '@mdx-js/react',
+    remarkPlugins: [remarkHeadingId],
   },
 })
 module.exports = withMDX({
