@@ -2,6 +2,8 @@ import Head from 'next/head'
 
 import News from '../contents/news.mdx'
 
+const userName = 'ピクセル グリオ'
+
 export default function Home() {
   return (
     <>
@@ -14,7 +16,7 @@ export default function Home() {
       <main>
         <h2>新着記事</h2>
         <h2>お知らせ</h2>
-        <News />
+        <News userName={userName} />
       </main>
     </>
   )
